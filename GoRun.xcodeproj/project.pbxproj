@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D35D1E6269D238100C6B3E4 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1E5269D238100C6B3E4 /* LocationService.swift */; };
+		5D35D1EC269FFE7A00C6B3E4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1EB269FFE7A00C6B3E4 /* LottieView.swift */; };
+		5D35D1EE26A1258100C6B3E4 /* DayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1ED26A1258000C6B3E4 /* DayWeather.swift */; };
+		5D35D1F126A12B4E00C6B3E4 /* DayViewReadout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1F026A12B4E00C6B3E4 /* DayViewReadout.swift */; };
+		5D35D1F326A130B300C6B3E4 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1F226A130B300C6B3E4 /* DayViewModel.swift */; };
+		5D35D1F726A1593F00C6B3E4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1F626A1593F00C6B3E4 /* RootViewController.swift */; };
+		5D35D1F926A159DF00C6B3E4 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1F826A159DF00C6B3E4 /* DayView.swift */; };
+		5D35D1FB26A159F200C6B3E4 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1FA26A159F200C6B3E4 /* WeekView.swift */; };
+		5D35D1FD26A15AB400C6B3E4 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1FC26A15AB400C6B3E4 /* BackgroundView.swift */; };
+		5D35D1FF26A15BFF00C6B3E4 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D1FE26A15BFF00C6B3E4 /* WeekViewModel.swift */; };
+		5D35D20126A15C1600C6B3E4 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D20026A15C1600C6B3E4 /* RootViewModel.swift */; };
+		5D35D20526A923EF00C6B3E4 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35D20426A923EF00C6B3E4 /* LocationView.swift */; };
+		5D7807F026B75F3900EA9311 /* DefaultLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7807EF26B75F3900EA9311 /* DefaultLocation.swift */; };
+		5D78082926BBBB8300EA9311 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D78082826BBBB8300EA9311 /* WidgetView.swift */; };
 		5D83792F25DC8C030082B6FE /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D83792E25DC8C030082B6FE /* APIKeys.swift */; };
 		5D86B7E425D8DE0000994411 /* GoRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86B7E325D8DE0000994411 /* GoRunApp.swift */; };
 		5D86B7E625D8DE0000994411 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86B7E525D8DE0000994411 /* ContentView.swift */; };
@@ -67,6 +81,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D35D1E5269D238100C6B3E4 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		5D35D1EB269FFE7A00C6B3E4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		5D35D1ED26A1258000C6B3E4 /* DayWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeather.swift; sourceTree = "<group>"; };
+		5D35D1F026A12B4E00C6B3E4 /* DayViewReadout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewReadout.swift; sourceTree = "<group>"; };
+		5D35D1F226A130B300C6B3E4 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
+		5D35D1F626A1593F00C6B3E4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		5D35D1F826A159DF00C6B3E4 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		5D35D1FA26A159F200C6B3E4 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		5D35D1FC26A15AB400C6B3E4 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		5D35D1FE26A15BFF00C6B3E4 /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
+		5D35D20026A15C1600C6B3E4 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		5D35D20426A923EF00C6B3E4 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		5D7807EF26B75F3900EA9311 /* DefaultLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocation.swift; sourceTree = "<group>"; };
+		5D78082826BBBB8300EA9311 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		5D83792E25DC8C030082B6FE /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		5D86B7E025D8DE0000994411 /* GoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D86B7E325D8DE0000994411 /* GoRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoRunApp.swift; sourceTree = "<group>"; };
@@ -128,10 +156,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D35D1EF26A12B3300C6B3E4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5D35D1F026A12B4E00C6B3E4 /* DayViewReadout.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5D746D9926CD1DC700833B38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D35D1FC26A15AB400C6B3E4 /* BackgroundView.swift */,
+				5D86B7E525D8DE0000994411 /* ContentView.swift */,
+				5D35D1EB269FFE7A00C6B3E4 /* LottieView.swift */,
+				5D86B82625D9E7F600994411 /* WeatherViewModel.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5D83792925DC8AE50082B6FE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				5D83792E25DC8C030082B6FE /* APIKeys.swift */,
+				5D7807EF26B75F3900EA9311 /* DefaultLocation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -147,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				5D86B7E225D8DE0000994411 /* GoRun */,
+				5D746D9926CD1DC700833B38 /* Supporting Files */,
 				5D86B7F425D8DE0300994411 /* GoRunTests */,
 				5D86B7FF25D8DE0300994411 /* GoRunUITests */,
 				5D86B83B25DBBA0800994411 /* GoRunWidget */,
@@ -169,15 +218,16 @@
 		5D86B7E225D8DE0000994411 /* GoRun */ = {
 			isa = PBXGroup;
 			children = (
+				5D35D1EF26A12B3300C6B3E4 /* Protocols */,
 				5D83793825DC8E980082B6FE /* Configuration */,
 				5D86B81625D8DFA500994411 /* Main */,
 				5D86B81125D8DF6100994411 /* Models */,
 				5D86B81725D8DFC500994411 /* Services */,
 				5D86B82525D9E7D400994411 /* View Models */,
 				5D86B81225D8DF6800994411 /* Views */,
+				5D83792925DC8AE50082B6FE /* Utilities */,
 				5D86B7E725D8DE0300994411 /* Assets.xcassets */,
 				5D86B7EC25D8DE0300994411 /* Info.plist */,
-				5D83792925DC8AE50082B6FE /* Utilities */,
 				5D86B7E925D8DE0300994411 /* Preview Content */,
 			);
 			path = GoRun;
@@ -215,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				5D86B81825D9127F00994411 /* Weather.swift */,
+				5D35D1ED26A1258000C6B3E4 /* DayWeather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,7 +273,10 @@
 		5D86B81225D8DF6800994411 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5D86B7E525D8DE0000994411 /* ContentView.swift */,
+				5D35D20426A923EF00C6B3E4 /* LocationView.swift */,
+				5D35D1F626A1593F00C6B3E4 /* RootViewController.swift */,
+				5D35D1F826A159DF00C6B3E4 /* DayView.swift */,
+				5D35D1FA26A159F200C6B3E4 /* WeekView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +292,7 @@
 		5D86B81725D8DFC500994411 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5D35D1E5269D238100C6B3E4 /* LocationService.swift */,
 				5D86B82025D9E50A00994411 /* WeatherService.swift */,
 			);
 			path = Services;
@@ -246,7 +301,9 @@
 		5D86B82525D9E7D400994411 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				5D86B82625D9E7F600994411 /* WeatherViewModel.swift */,
+				5D35D20026A15C1600C6B3E4 /* RootViewModel.swift */,
+				5D35D1FE26A15BFF00C6B3E4 /* WeekViewModel.swift */,
+				5D35D1F226A130B300C6B3E4 /* DayViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -264,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				5D86B83C25DBBA0800994411 /* GoRunWidget.swift */,
+				5D78082826BBBB8300EA9311 /* WidgetView.swift */,
 				5D86B83E25DBBA0800994411 /* GoRunWidget.intentdefinition */,
 				5D86B83F25DBBA0B00994411 /* Assets.xcassets */,
 				5D86B84125DBBA0B00994411 /* Info.plist */,
@@ -456,12 +514,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D35D1FB26A159F200C6B3E4 /* WeekView.swift in Sources */,
 				5D86B84325DBBA0C00994411 /* GoRunWidget.intentdefinition in Sources */,
+				5D35D1F926A159DF00C6B3E4 /* DayView.swift in Sources */,
+				5D35D1F126A12B4E00C6B3E4 /* DayViewReadout.swift in Sources */,
+				5D35D20126A15C1600C6B3E4 /* RootViewModel.swift in Sources */,
+				5D35D1F326A130B300C6B3E4 /* DayViewModel.swift in Sources */,
+				5D35D1EE26A1258100C6B3E4 /* DayWeather.swift in Sources */,
 				5D86B82725D9E7F600994411 /* WeatherViewModel.swift in Sources */,
+				5D35D1FD26A15AB400C6B3E4 /* BackgroundView.swift in Sources */,
+				5D78082926BBBB8300EA9311 /* WidgetView.swift in Sources */,
+				5D35D1E6269D238100C6B3E4 /* LocationService.swift in Sources */,
 				5D83792F25DC8C030082B6FE /* APIKeys.swift in Sources */,
 				5D86B82125D9E50A00994411 /* WeatherService.swift in Sources */,
+				5D35D1FF26A15BFF00C6B3E4 /* WeekViewModel.swift in Sources */,
 				5D86B7E625D8DE0000994411 /* ContentView.swift in Sources */,
+				5D35D1F726A1593F00C6B3E4 /* RootViewController.swift in Sources */,
 				5D86B81925D9128000994411 /* Weather.swift in Sources */,
+				5D35D1EC269FFE7A00C6B3E4 /* LottieView.swift in Sources */,
+				5D35D20526A923EF00C6B3E4 /* LocationView.swift in Sources */,
+				5D7807F026B75F3900EA9311 /* DefaultLocation.swift in Sources */,
 				5D86B7E425D8DE0000994411 /* GoRunApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

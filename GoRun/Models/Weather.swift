@@ -12,16 +12,25 @@ struct WeatherResponse: Decodable {
 }
 
 struct Weather: Decodable {
-    var dt: Double?
-    var rain: Double?
-    var temp: Temp?
-
+    var date: Double
+    var windSpeed: Double
+    var precipitation: Double
+    var humidity: Double
+    var temp: Temp
+    
+    enum CodingKeys: String, CodingKey {
+        case date = "dt"
+        case precipitation = "pop"
+        case windSpeed = "wind_speed"
+        case humidity
+        case temp
+    }
 }
 
 struct Temp: Decodable {
-    var day: Double?
-    var eve: Double?
-    var morn: Double?
+    var day: Double
+    var eve: Double
+    var morn: Double
 }
 
 extension WeatherResponse: Identifiable {

@@ -11,7 +11,7 @@ import SwiftUI
 struct GoRunApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootViewController()
         }
     }
 }
