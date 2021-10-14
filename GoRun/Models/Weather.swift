@@ -40,3 +40,11 @@ extension WeatherResponse: Identifiable {
 extension Weather: Identifiable {
     var id: UUID {return UUID() }
 }
+
+extension Weather: Equatable {
+    static func == (lhs: Weather, rhs: Weather) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+

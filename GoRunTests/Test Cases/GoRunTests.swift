@@ -23,7 +23,7 @@ class GoRunTests: XCTestCase {
         
         let weatherResponse = try! decoder.decode(WeatherResponse.self, from: data)
         
-        viewModel = WeatherViewModel()
+        viewModel.weather = weatherResponse.daily
     }
     
     override func tearDown() {
@@ -32,13 +32,16 @@ class GoRunTests: XCTestCase {
     
     func testDate() {
         
-        guard let weather = viewModel.weather.first?.dt else {return}
+        guard let weather = viewModel.weather.first?.date else {return}
 
         XCTAssertEqual(viewModel.formatTemp(temp: weather), "Sun, February 14 2020")
     }
     
     func testTemperature() {
-        XCTAssertEqual(viewModel.weather.first?.temp?.day, 52.4)
+        
+        guard let temp = viewModel.weather.first?.date else {return}
+
+        XCTAssertEqual(temp, 52.4)
     }
     
     

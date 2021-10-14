@@ -8,85 +8,63 @@
 import SwiftUI
 
 struct DayView: View {
-    @ObservedObject var dayViewModel: DayViewModel
     
-    init(viewModel: DayViewModel) {
-        self.dayViewModel = viewModel
-        setupNav()
-    }
+    @EnvironmentObject var weatherData: WeatherData
+    
+    init() {}
     
     var body: some View {
-        
-        NavigationView {
-            ScrollView {
-                ZStack {
-                    Image("running")
-                        .resizable()
-                        .frame(height: 400)
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(20)
-                        .zIndex(0)
-                        
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                        .frame(height: 400)
-                        .shadow(radius: 1, x: 2
-                                , y: 4)
-                        .opacity(0.8)
-                        .zIndex(1)
+        GeometryReader { screen in
+            ZStack {
+                //  *** MainBackground Image ***
+                Image("running")
+                    .resizable()
+                    .frame(height: screen.size.height / 2)
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                    .zIndex(0) // Background
+                
+                // *** MainBackground ***
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .frame(height: screen.size.height / 2)
+                    .shadow(radius: 1, x: 2
+                            , y: 4)
+                    .opacity(0.8)
+                    .zIndex(1)
+                
+                VStack() {
+                    Image(systemName: "figure.walk")
+                        .animation(.easeInOut(duration: 1))
+                        .font(.system(size: 180))
+                        .foregroundColor(.white)
+                        .padding()
+                        .position(x: 110, y: 200)
+                     
+                        .frame(width: 200, height: 200, alignment: .center)
                     
-                    VStack() {
-                   
-                        Image(systemName: "figure.walk")
-                            .animation(.easeInOut(duration: 1))
-                            .font(.system(size: 180))
-                            .foregroundColor(.white)
-                            .padding()
-                            .position(x: 120, y: 220)
-                            .frame(width: 200, height: 200, alignment: .center)
-                        
-                        Text("GoRun")
-                            .animation(.easeInOut(duration: 1))
+                    Text("GoRun")
+                        .animation(.easeInOut(duration: 1))
+                
+                        .font(.system(size: 30, weight: .heavy, design: .default))
+                        .foregroundColor(.white)
+                        .position(x: 230, y: 120)
                     
-                            .font(.system(size: 30, weight: .heavy, design: .default))
-                            .foregroundColor(.white)
-                            .position(x: 260, y: 140)
-                        
-                        Text("Optimal Weather")
-                            .animation(.easeInOut(duration: 1))
-                            .font(.system(size: 20, weight: .heavy, design: .default))
-                            .position(x: 280, y: 70)
-                            .foregroundColor(.gray)
-                        
-                    }
-                    .zIndex(2)
+                    Text("Optimal Weather")
+                        .animation(.easeInOut(duration: 1))
+                        .font(.system(size: 20, weight: .heavy, design: .default))
+                        .position(x: 270, y: 60)
+                        .foregroundColor(.gray)
                 }
-                .padding()
+                .zIndex(2.0)
             }
-            .navigationBarTitle("GoRun", displayMode: .large)
-            
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                            HStack {
-                                Image(systemName: "sun.min.fill")
-                                Text("Today is a good day for running")
-                                    .font(.headline)
-                                    .foregroundColor(.orange)
-                            }
-                        }
-            }
-
+            .frame(width: screen.size.width, height: screen.size.height / 2, alignment: .center)
         }
-    }
-    
-    func setupNav() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.gray]
-
     }
 }
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(viewModel: DayViewModel())
+        DayView()
     }
 }

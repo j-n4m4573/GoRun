@@ -10,7 +10,7 @@ import SwiftUI
 struct WidgetView: View {
     var body: some View {
         LazyVStack {
-            DayView(viewModel: <#DayViewModel#>)
+//            DayView(viewModel: DayViewModel())
         }
     }
 }

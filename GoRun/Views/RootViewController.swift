@@ -10,44 +10,53 @@ import CoreLocation
 
 struct RootViewController: View {
     @StateObject var rootViewModel =  RootViewModel()
-    
-    init() {
-        setupViews()
-    }
+    @StateObject var weatherData = WeatherData()
+    @State var refresh: Bool = false
+
+    init() {}
     
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
+        GeometryReader { geometry in
+            NavigationView {
+                ScrollView {
                     VStack {
-                        ZStack {
-                            Rectangle()
-                                .fill(Color.white)
-                                .cornerRadius(20)
-                                .shadow(radius: 4.0)
-                                .zIndex(0)
-                                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.5, alignment: .center)
-                            Image("running")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(10)
-                                .clipped()
-                                .zIndex(1)
-                                .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.48, alignment: .center)
-                        }
                         
-                        .background(Color.white)
-                        .padding()
+                        //MARK: DayView
+                        DayView()
+                            .frame(width: geometry.size.width, height: geometry.size.height , alignment: .center)
                         
-                        // **** Week View ****
-                      
-                        WeekView(viewModel: rootViewModel)
+                        //MARK: WeekView
+                        WeekView()
+                            .frame(width: geometry.size.width, height: geometry.size.height / 2, alignment: .center)
+                    }
+                }
+                .navigationBarTitle("GoRun", displayMode: .large)
+                
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                            HStack {
+                                Image(systemName: "sun.min.fill")
+                                Text("Today is a good day for running")
+                                    .font(.headline)
+                                    .foregroundColor(.orange)
+                            }
                     }
                 }
             }
+        }
+        .environmentObject(weatherData)
+        .onAppear {
+            setupNav()
+            setupViews()
+        }
+    }
+     
+    func setupViews() {
+        weatherData.weather = rootViewModel.weather.map{$0}
     }
     
-    func setupViews() {
-        
+    func setupNav() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.gray]
     }
 }
 
