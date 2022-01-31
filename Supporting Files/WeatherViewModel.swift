@@ -37,39 +37,6 @@ class WeatherViewModel: ObservableObject {
     }
     
     
-    func fetchIcons(for day: Weather) -> [UIImage] {
-        var icons: [UIImage] = []
-        
-        weather.forEach { day in
-            
-            // check temp is optimal, add icon
-            if day.temp.day > 80.00 {
-                if let image = UIImage(named: "Sun") {
-                    icons.append(image)
-                }
-            }
-            // check wind is optimal, add icon
-            if day.windSpeed > 0.5 {
-                if let image = UIImage(named: "Wind") {
-                    icons.append(image)
-                }
-            }
-            // check if humidy is optimal, add icon
-            if day.humidity > 0.9 {
-                if let image = UIImage(named: "Humid") {
-                    icons.append(image)
-                }
-            }
-            // check if precipritation is optimal
-            if day.precipitation > 0.9 {
-                if let image = UIImage(named: "Rain") {
-                    icons.append(image)
-                }
-            }
-        }
-        return icons
-    }
-    
     func formatDate(timeInt: TimeInterval) -> String {
         
         let date = Date(timeIntervalSince1970: timeInt)

@@ -79,6 +79,6 @@ struct WeekViewList: View {
 
 struct WeekViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        WeekViewList()
+        WeekViewList().environmentObject(WeatherData())
     }
 }

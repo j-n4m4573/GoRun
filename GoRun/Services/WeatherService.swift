@@ -8,6 +8,10 @@
 import Foundation
 import CoreLocation
 
+protocol WeatherManager {
+    func fetchWeather(latitude: Double, longitude: Double, completion: @escaping([Weather]?) -> ())
+}
+
 class WeatherService {
     
     func fetchWeather(latitude: Double, longitude: Double, completion: @escaping ([Weather]?) -> () ) {
@@ -48,30 +52,7 @@ class WeatherService {
         }
         dataTask.resume()
     }
-    
-    func getWeather(city: String, completion: @escaping ([Weather]?) -> ()) {
-        
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=37.7576171&lon=-122.5776844&exclude=minutely,hourly,alerts&appid=\(APIKeys.weatherKey)") else { completion(nil)
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            guard let data = data, error == nil else {
-                debugPrint("network error: \(String(describing: error))")
-                completion(nil)
-                return
-            }
-            
-            do {
-                let weatherResponse = try JSONDecoder().decode(WeatherResponse.self, from: data)
-                let weather = weatherResponse.daily
-                completion(weather)
-            } catch {
-                print(error)
-                completion(nil)
-            }
-        }.resume()
-    }
 }
+
+extension WeatherService: WeatherManager {}
 

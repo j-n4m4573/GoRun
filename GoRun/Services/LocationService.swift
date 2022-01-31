@@ -9,8 +9,11 @@ import Foundation
 import CoreLocation
 import MapKit
 
+protocol LocationManager {
+    var location: CLLocation {get}
+}
+
 class LocationService: NSObject, ObservableObject {
-    
     @Published var location: CLLocation = {
         let location = CLLocation()
         return location
@@ -53,3 +56,7 @@ extension LocationService: CLLocationManagerDelegate {
         guard let clError = error as? CLError else {return}
     }
 }
+
+extension LocationService: LocationManager {}
+
+

@@ -9,38 +9,31 @@ import SwiftUI
 
 struct WeekView: View {
     @EnvironmentObject var weatherData: WeatherData
+    @ObservedObject var viewModel: WeekViewModel
     @State var refresh: Bool = false
     
-    init() {}
+    init(weekViewModel: WeekViewModel) {
+        self.viewModel = weekViewModel
+    }
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                Text("This Week")
-                    .font(.system(size: 20, weight: .heavy, design: .default))
-                    .position(x: 20, y: 20)
-                    .foregroundColor(.gray)
-                    .frame(width: 100, height: 20)
-               
-                VStack {
+            VStack(alignment: .center) {
                  
                     if weatherData.weather.isEmpty {
                         Text("weather data is empty 🤷🏾‍♂️")
                     } else {
-                        WeekViewList()
+                        WeekViewGrid(weekViewModel: viewModel)
                     }
-                }
             }
-        }
-        .onAppear {
-            
+            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
         }
     }
 }
 
 struct WeekView_Previews: PreviewProvider {
     static var previews: some View {
-        WeekView()
+        WeekView(weekViewModel: WeekViewModel())
     }
 }
 

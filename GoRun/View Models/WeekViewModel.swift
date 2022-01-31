@@ -8,10 +8,20 @@ import SwiftUI
 
 class WeekViewModel: ObservableObject {
     
-    @Published var weather:  [Weather]
+    private let dateFormatter = DateFormatter()
     
-    init(weather: [Weather]) {
-        self.weather = weather
+    func formatDate(from dateDouble: Double) -> String {
+        let date = Date(timeIntervalSince1970: dateDouble)
+        dateFormatter.dateFormat = "EEEEE"
+        return dateFormatter.string(from: date)
+    }
+
+    func formatTemp(from tempDouble: Double) -> String {
+        return String(format: "%.1f °F", tempDouble)
+    }
+
+    func formatWindSpeed(from windDouble: Double) -> String {
+        return String(format: "%.f MPH", windDouble)
     }
     
     

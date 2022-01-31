@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct DayView: View {
-    
+    @ObservedObject var viewModel: DayViewModel
     @EnvironmentObject var weatherData: WeatherData
     
-    init() {}
+    init(dayViewModel: DayViewModel) {
+        self.viewModel = dayViewModel
+    }
     
     var body: some View {
         GeometryReader { screen in
@@ -53,7 +55,7 @@ struct DayView: View {
                     Text("Optimal Weather")
                         .animation(.easeInOut(duration: 1))
                         .font(.system(size: 20, weight: .heavy, design: .default))
-                        .position(x: 270, y: 60)
+                        .position(x: 280, y: 50)
                         .foregroundColor(.gray)
                 }
                 .zIndex(2.0)
@@ -65,6 +67,6 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView()
+        DayView(dayViewModel: DayViewModel())
     }
 }
